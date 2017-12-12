@@ -1,20 +1,20 @@
 package com.model;
 
-import com.method.controller_kategori;
 import com.koneksi.koneksi;
-import com.view.FrmKategori;
+import com.form.FormKategori;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import javax.swing.JOptionPane;
+import com.method.interface_kategori;
 
 
-public class model_kategori implements controller_kategori {
+public class model_kategori implements interface_kategori {
 
     @Override
-    public void Simpan(FrmKategori ktg) throws SQLException {
+    public void Simpan(FormKategori ktg) throws SQLException {
         try {
             Connection con = koneksi.getKoneksi();
             String sql = "insert kategori values (?,?)";
@@ -37,7 +37,7 @@ public class model_kategori implements controller_kategori {
     }
 
     @Override
-    public void Ubah(FrmKategori ktg) throws SQLException {
+    public void Ubah(FormKategori ktg) throws SQLException {
         try {
             Connection con = koneksi.getKoneksi();
             String sql = "update kategori set nama = ? where id_kategori = ?";
@@ -60,7 +60,7 @@ public class model_kategori implements controller_kategori {
     }
 
     @Override
-    public void Hapus(FrmKategori ktg) throws SQLException {
+    public void Hapus(FormKategori ktg) throws SQLException {
         try {
             Connection con = koneksi.getKoneksi();
             String sql = "delete from kategori where id_kategori = ?";
@@ -82,7 +82,7 @@ public class model_kategori implements controller_kategori {
     }
 
     @Override
-    public void Tampil(FrmKategori ktg) throws SQLException {
+    public void Tampil(FormKategori ktg) throws SQLException {
         ktg.tbl.getDataVector().removeAllElements();
         ktg.tbl.fireTableDataChanged();
         try {
@@ -102,14 +102,14 @@ public class model_kategori implements controller_kategori {
     }
 
     @Override
-    public void Bersih(FrmKategori ktg) throws SQLException {
+    public void Bersih(FormKategori ktg) throws SQLException {
         ktg.txtid_kategori.setText(null);
         ktg.txtnama_kategori.setText(null);
         ktg.txtnama_kategori.requestFocus();
     }
 
     @Override
-    public void KlikTabel(FrmKategori ktg) throws SQLException {
+    public void KlikTabel(FormKategori ktg) throws SQLException {
         try {
             int pilih = ktg.tblKategori.getSelectedRow();
             if (pilih == -1) {
@@ -124,7 +124,7 @@ public class model_kategori implements controller_kategori {
     }
 
     @Override
-    public void AutoNomor(FrmKategori ktg) throws SQLException {
+    public void AutoNomor(FormKategori ktg) throws SQLException {
          try{
             Connection con = koneksi.getKoneksi();
             

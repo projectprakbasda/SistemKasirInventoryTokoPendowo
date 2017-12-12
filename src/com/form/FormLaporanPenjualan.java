@@ -1,4 +1,4 @@
-package com.view;
+package com.form;
 
 import java.sql.SQLException;
 import java.util.logging.Level;
@@ -6,12 +6,12 @@ import java.util.logging.Logger;
 import com.model.model_laporan;
 import java.text.SimpleDateFormat;
 
-public class FrmLaporanPenjualan extends javax.swing.JFrame {
+public class FormLaporanPenjualan extends javax.swing.JFrame {
 
     model_laporan model = new model_laporan();
     public String tglFrom, tglUntil;
     SimpleDateFormat format=new SimpleDateFormat("yyyy-MM-dd");
-    public FrmLaporanPenjualan() {
+    public FormLaporanPenjualan() {
         initComponents();
         txtTglDari.setDateFormatString("dd-MM-yyyy");
         txtTglSampai.setDateFormatString("dd-MM-yyyy");
@@ -117,7 +117,7 @@ public class FrmLaporanPenjualan extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnKeluarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKeluarActionPerformed
-        new FrmMenuAwal().show();
+        new FormMenuAwal().show();
         dispose();
     }//GEN-LAST:event_btnKeluarActionPerformed
 
@@ -125,7 +125,7 @@ public class FrmLaporanPenjualan extends javax.swing.JFrame {
         try {
             model.Tampilkan(this);
         } catch (SQLException ex) {
-            Logger.getLogger(FrmLaporanPenjualan.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(FormLaporanPenjualan.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_btnTampilkanActionPerformed
 
@@ -158,21 +158,23 @@ public class FrmLaporanPenjualan extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(FrmLaporanPenjualan.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FormLaporanPenjualan.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(FrmLaporanPenjualan.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FormLaporanPenjualan.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(FrmLaporanPenjualan.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FormLaporanPenjualan.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(FrmLaporanPenjualan.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FormLaporanPenjualan.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new FrmLaporanPenjualan().setVisible(true);
+                new FormLaporanPenjualan().setVisible(true);
             }
         });
     }

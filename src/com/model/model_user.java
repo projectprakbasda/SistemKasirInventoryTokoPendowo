@@ -2,7 +2,7 @@ package com.model;
 
 import com.method.controller_user;
 import com.koneksi.koneksi;
-import com.view.FrmUser;
+import com.form.FormUser;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -14,7 +14,7 @@ import javax.swing.JOptionPane;
 public class model_user implements controller_user{
 
     @Override
-    public void Simpan(FrmUser usr) throws SQLException {
+    public void Simpan(FormUser usr) throws SQLException {
         try {
             Connection con = koneksi.getKoneksi();
             String sql = "insert user values (?,?,?,?)";
@@ -39,7 +39,7 @@ public class model_user implements controller_user{
     }
 
     @Override
-    public void Ubah(FrmUser usr) throws SQLException {
+    public void Ubah(FormUser usr) throws SQLException {
         try {
             Connection con = koneksi.getKoneksi();
             String sql = "update user set username = ?, "
@@ -67,7 +67,7 @@ public class model_user implements controller_user{
     }
 
     @Override
-    public void Hapus(FrmUser usr) throws SQLException {
+    public void Hapus(FormUser usr) throws SQLException {
         try {
             Connection con = koneksi.getKoneksi();
             String sql = "delete from user where id_user = ?";
@@ -89,7 +89,7 @@ public class model_user implements controller_user{
     }
 
     @Override
-    public void Tampil(FrmUser usr) throws SQLException {
+    public void Tampil(FormUser usr) throws SQLException {
         usr.tbl.getDataVector().removeAllElements();
         usr.tbl.fireTableDataChanged();
         try {
@@ -111,7 +111,7 @@ public class model_user implements controller_user{
     }
 
     @Override
-    public void Bersih(FrmUser usr) throws SQLException {
+    public void Bersih(FormUser usr) throws SQLException {
         usr.txtid_user.setText(null);
         usr.txtusername.setText(null);
         usr.txtpassword.setText(null);
@@ -120,7 +120,7 @@ public class model_user implements controller_user{
     }
 
     @Override
-    public void KlikTabel(FrmUser usr) throws SQLException {
+    public void KlikTabel(FormUser usr) throws SQLException {
         try {
             int pilih = usr.tblUser.getSelectedRow();
             if (pilih == -1) {
@@ -136,7 +136,7 @@ public class model_user implements controller_user{
     }
 
     @Override
-    public void AutoNomor(FrmUser usr) throws SQLException {
+    public void AutoNomor(FormUser usr) throws SQLException {
         try {
             Connection con = koneksi.getKoneksi();
             

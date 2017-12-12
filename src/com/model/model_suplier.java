@@ -2,7 +2,7 @@ package com.model;
 
 import com.method.controller_suplier;
 import com.koneksi.koneksi;
-import com.view.FrmSuplier;
+import com.form.FormSuplier;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -14,7 +14,7 @@ import javax.swing.JOptionPane;
 public class model_suplier implements controller_suplier{
 
     @Override
-    public void Simpan(FrmSuplier spl) throws SQLException {
+    public void Simpan(FormSuplier spl) throws SQLException {
         try {
             Connection con = koneksi.getKoneksi();
             String sql = "insert suplier values (?,?,?,?,?,?)";
@@ -41,7 +41,7 @@ public class model_suplier implements controller_suplier{
     }
 
     @Override
-    public void Ubah(FrmSuplier spl) throws SQLException {
+    public void Ubah(FormSuplier spl) throws SQLException {
          try {
             Connection con = koneksi.getKoneksi();
             String sql = "update suplier set nama = ?, "
@@ -73,7 +73,7 @@ public class model_suplier implements controller_suplier{
     }
 
     @Override
-    public void Hapus(FrmSuplier spl) throws SQLException {
+    public void Hapus(FormSuplier spl) throws SQLException {
         try {
             Connection con = koneksi.getKoneksi();
             String sql = "delete from suplier where id_suplier = ?";
@@ -95,7 +95,7 @@ public class model_suplier implements controller_suplier{
     }
 
     @Override
-    public void Tampil(FrmSuplier spl) throws SQLException {
+    public void Tampil(FormSuplier spl) throws SQLException {
         spl.tbl.getDataVector().removeAllElements();
         spl.tbl.fireTableDataChanged();
         try {
@@ -119,7 +119,7 @@ public class model_suplier implements controller_suplier{
     }
 
     @Override
-    public void Bersih(FrmSuplier spl) throws SQLException {
+    public void Bersih(FormSuplier spl) throws SQLException {
         spl.txtid_suplier.setText(null);
         spl.txtnama_suplier.setText(null);
         spl.txtalamat.setText(null);
@@ -130,7 +130,7 @@ public class model_suplier implements controller_suplier{
     }
 
     @Override
-    public void KlikTabel(FrmSuplier spl) throws SQLException {
+    public void KlikTabel(FormSuplier spl) throws SQLException {
         try {
             int pilih = spl.tblsuplier.getSelectedRow();
             if (pilih == -1) {
@@ -148,7 +148,7 @@ public class model_suplier implements controller_suplier{
     }
 
     @Override
-    public void AutoNomor(FrmSuplier spl) throws SQLException {
+    public void AutoNomor(FormSuplier spl) throws SQLException {
         try {
             Connection con = koneksi.getKoneksi();
             

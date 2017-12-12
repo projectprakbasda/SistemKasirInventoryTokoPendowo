@@ -2,7 +2,7 @@
 package com.model;
 import com.method.controller_laporan;
 import com.koneksi.koneksi;
-import com.view.FrmLaporanPenjualan;
+import com.form.FormLaporanPenjualan;
 import java.io.File;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -29,7 +29,7 @@ public class model_laporan implements controller_laporan{
     Map<String, Object> parameter = new HashMap<String, Object>();
     
     @Override
-    public void Tampilkan(FrmLaporanPenjualan Lp) throws SQLException {
+    public void Tampilkan(FormLaporanPenjualan Lp) throws SQLException {
         try {
             parameter.put("tgldari", Lp.tglFrom);
             parameter.put("tglsampai", Lp.tglUntil);

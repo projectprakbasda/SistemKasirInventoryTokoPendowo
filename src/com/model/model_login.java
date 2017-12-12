@@ -3,9 +3,9 @@ package com.model;
 import com.method.controller_login;
 import com.koneksi.UserID;
 import com.koneksi.koneksi;
-import com.view.FrmLogin;
-import com.view.FrmMenuAwal;
-import com.view.FrmKasir;
+import com.form.FormLogin;
+import com.form.FormMenuAwal;
+import com.form.FormKasir;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -15,7 +15,7 @@ import javax.swing.JOptionPane;
 public class model_login implements controller_login {
 
     @Override
-    public void Login(FrmLogin lgn) throws SQLException {
+    public void Login(FormLogin lgn) throws SQLException {
         try {
             Connection con = koneksi.getKoneksi();
             Statement st = con.createStatement();
@@ -29,10 +29,10 @@ public class model_login implements controller_login {
             if (rs.next()) {
                 UserID.setUserLogin(lgn.txtusername.getText());
                 if (rs.getString(4).equalsIgnoreCase("admin")) {
-                    new FrmMenuAwal().show();
+                    new FormMenuAwal().show();
                     lgn.dispose();
                 } else if (rs.getString(4).equalsIgnoreCase("kasir")) {
-                    new FrmKasir().show();
+                    new FormKasir().show();
                     lgn.dispose();
                 } else {
                     JOptionPane.showMessageDialog(lgn, "Password Salah");
@@ -48,7 +48,7 @@ public class model_login implements controller_login {
     }
 
     @Override
-    public void Bersih(FrmLogin lgn) throws SQLException {
+    public void Bersih(FormLogin lgn) throws SQLException {
         lgn.txtusername.setText(null);
         lgn.txtpassword.setText(null);
         lgn.txtusername.requestFocus();

@@ -1,16 +1,16 @@
 
-package com.view;
+package com.form;
 
 import com.model.model_login;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class FrmLogin extends javax.swing.JFrame {
+public class FormLogin extends javax.swing.JFrame {
     
     model_login model = new model_login();
 
-    public FrmLogin() throws SQLException {
+    public FormLogin() throws SQLException {
         initComponents();
         this.getRootPane().setDefaultButton(btnLogin);
     }
@@ -147,7 +147,7 @@ public class FrmLogin extends javax.swing.JFrame {
         try {
             model.Login(this);
         } catch (Exception ex) {
-            Logger.getLogger(FrmLogin.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(FormLogin.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_btnLoginActionPerformed
 
@@ -172,14 +172,16 @@ public class FrmLogin extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(FrmLogin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FormLogin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(FrmLogin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FormLogin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(FrmLogin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FormLogin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(FrmLogin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FormLogin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
@@ -187,9 +189,9 @@ public class FrmLogin extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 try {
-                    new FrmLogin().setVisible(true);
+                    new FormLogin().setVisible(true);
                 } catch (SQLException ex) {
-                    Logger.getLogger(FrmLogin.class.getName()).log(Level.SEVERE, null, ex);
+                    Logger.getLogger(FormLogin.class.getName()).log(Level.SEVERE, null, ex);
                 }
                 
             }

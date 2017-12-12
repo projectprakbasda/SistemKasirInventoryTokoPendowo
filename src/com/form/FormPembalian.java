@@ -1,4 +1,4 @@
-package com.view;
+package com.form;
 
 import com.model.model_pembelian;
 import java.awt.Component;
@@ -12,13 +12,13 @@ import javax.swing.table.TableCellRenderer;
 import javax.swing.table.TableColumn;
 
 
-public class FrmPembalian extends javax.swing.JFrame {
+public class FormPembalian extends javax.swing.JFrame {
     
     public DefaultTableModel tbl;
     String header[] = {"ID Pembelian", "No Faktur", "Suplier", "Tanggal", "Jumlah"};
     model_pembelian model = new model_pembelian();
     
-    public FrmPembalian() throws SQLException {
+    public FormPembalian() throws SQLException {
         initComponents();
         tbl = new DefaultTableModel(null, header);
         tblPembelian.setModel(tbl);
@@ -295,7 +295,7 @@ public class FrmPembalian extends javax.swing.JFrame {
         try {
             model.Simpan(this);
         } catch (Exception ex) {
-            Logger.getLogger(FrmPembalian.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(FormPembalian.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_btnSimpanActionPerformed
 
@@ -303,7 +303,7 @@ public class FrmPembalian extends javax.swing.JFrame {
         try {
             model.Hapus(this);
         } catch (Exception ex) {
-            Logger.getLogger(FrmPembalian.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(FormPembalian.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_btnHapusActionPerformed
 
@@ -311,12 +311,12 @@ public class FrmPembalian extends javax.swing.JFrame {
         try {
             model.KlikTabel(this);
         } catch (Exception ex) {
-            Logger.getLogger(FrmPembalian.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(FormPembalian.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_tblPembelianMouseClicked
 
     private void btnKeluarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKeluarActionPerformed
-        new FrmMenuAwal().show();
+        new FormMenuAwal().show();
         dispose();
     }//GEN-LAST:event_btnKeluarActionPerformed
 
@@ -324,7 +324,7 @@ public class FrmPembalian extends javax.swing.JFrame {
         try {
             model.Combo3(this);
         } catch (Exception ex) {
-            Logger.getLogger(FrmPembalian.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(FormPembalian.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_cmbFakturActionPerformed
 
@@ -332,7 +332,7 @@ public class FrmPembalian extends javax.swing.JFrame {
         try {
             model.Combo4(this);
         } catch (Exception ex) {
-            Logger.getLogger(FrmPembalian.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(FormPembalian.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_cmbSuplierActionPerformed
 
@@ -341,7 +341,7 @@ public class FrmPembalian extends javax.swing.JFrame {
             model.Bersih(this);
             model.AutoNomor(this);
         } catch (Exception ex) {
-            Logger.getLogger(FrmPembalian.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(FormPembalian.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_btnBatalActionPerformed
 
@@ -362,23 +362,24 @@ public class FrmPembalian extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(FrmPembalian.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FormPembalian.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(FrmPembalian.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FormPembalian.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(FrmPembalian.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FormPembalian.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(FrmPembalian.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FormPembalian.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 try {
-                    new FrmPembalian().setVisible(true);
+                    new FormPembalian().setVisible(true);
                 } catch (SQLException ex) {
-                    Logger.getLogger(FrmPembalian.class.getName()).log(Level.SEVERE, null, ex);
+                    Logger.getLogger(FormPembalian.class.getName()).log(Level.SEVERE, null, ex);
                 }
             }
         });

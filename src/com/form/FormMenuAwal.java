@@ -1,4 +1,4 @@
-package com.view;
+package com.form;
 
 import com.koneksi.UserID;
 import java.awt.Dimension;
@@ -11,11 +11,11 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 
-public class FrmMenuAwal extends javax.swing.JFrame { 
+public class FormMenuAwal extends javax.swing.JFrame { 
     
     String ID = UserID.getUserLogin();
     
-    public FrmMenuAwal() {
+    public FormMenuAwal() {
         initComponents();
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
         Dimension frameSize = getSize();
@@ -244,63 +244,63 @@ public class FrmMenuAwal extends javax.swing.JFrame {
 
     private void btnPembelianActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPembelianActionPerformed
         try {
-            new FrmPembalian().show();
+            new FormPembalian().show();
             dispose();
         } catch (SQLException ex) {
-            Logger.getLogger(FrmMenuAwal.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(FormMenuAwal.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_btnPembelianActionPerformed
 
     private void btnFakturActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFakturActionPerformed
         try {
-            new FrmFaktur().show();
+            new FormFaktur().show();
             dispose();
         } catch (SQLException ex) {
-            Logger.getLogger(FrmMenuAwal.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(FormMenuAwal.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_btnFakturActionPerformed
 
     private void btnSuplierActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSuplierActionPerformed
         try {
-            new FrmSuplier().show();
+            new FormSuplier().show();
             dispose();
         } catch (SQLException ex) {
-            Logger.getLogger(FrmMenuAwal.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(FormMenuAwal.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_btnSuplierActionPerformed
 
     private void btnKasirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKasirActionPerformed
         try {
-            new FrmKasir().show();
+            new FormKasir().show();
             dispose();
         } catch (SQLException ex) {
-            Logger.getLogger(FrmMenuAwal.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(FormMenuAwal.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_btnKasirActionPerformed
 
     private void btnDataBarangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDataBarangActionPerformed
         try {
-            new FrmBarang().show();
+            new FormBarang().show();
             dispose();
         } catch (SQLException ex) {
-            Logger.getLogger(FrmMenuAwal.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(FormMenuAwal.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_btnDataBarangActionPerformed
 
     private void btnKategoriActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKategoriActionPerformed
         try {
-            new FrmKategori().show();
+            new FormKategori().show();
             dispose();
         } catch (SQLException ex) {
-            Logger.getLogger(FrmMenuAwal.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(FormMenuAwal.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_btnKategoriActionPerformed
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
         try {
-            new FrmLogin().show();
+            new FormLogin().show();
         } catch (SQLException ex) {
-            Logger.getLogger(FrmMenuAwal.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(FormMenuAwal.class.getName()).log(Level.SEVERE, null, ex);
         }
         dispose();
     }//GEN-LAST:event_jMenuItem1ActionPerformed
@@ -311,10 +311,10 @@ public class FrmMenuAwal extends javax.swing.JFrame {
 
     private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
         try {
-            new FrmUser().show();
+            new FormUser().show();
             dispose();
         } catch (SQLException ex) {
-            Logger.getLogger(FrmMenuAwal.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(FormMenuAwal.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_jMenuItem3ActionPerformed
 
@@ -335,21 +335,23 @@ public class FrmMenuAwal extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(FrmMenuAwal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FormMenuAwal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(FrmMenuAwal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FormMenuAwal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(FrmMenuAwal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FormMenuAwal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(FrmMenuAwal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FormMenuAwal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new FrmMenuAwal().setVisible(true);
+                new FormMenuAwal().setVisible(true);
             }
         });
     }

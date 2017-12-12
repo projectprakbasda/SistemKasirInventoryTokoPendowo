@@ -1,4 +1,4 @@
-package com.view;
+package com.form;
 
 import com.model.model_caribarang;
 import java.awt.Component;
@@ -12,13 +12,13 @@ import javax.swing.table.TableCellRenderer;
 import javax.swing.table.TableColumn;
 
 
-public class FrmCariBarang extends javax.swing.JFrame {
+public class FormCariBarang extends javax.swing.JFrame {
     
     public DefaultTableModel tbl;
     String header[] = {"Kode Barang", "Nama Barang", "Kategori", "Harga"};
     model_caribarang model = new model_caribarang();
     
-    public FrmCariBarang() throws SQLException {
+    public FormCariBarang() throws SQLException {
         initComponents();
         tbl = new DefaultTableModel(null, header);
         tblCariBarang.setModel(tbl);
@@ -146,7 +146,7 @@ public class FrmCariBarang extends javax.swing.JFrame {
             model.KlikTabel(this);
             dispose();
         } catch (Exception ex) {
-            Logger.getLogger(FrmCariBarang.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(FormCariBarang.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_tblCariBarangMouseClicked
 
@@ -155,7 +155,7 @@ public class FrmCariBarang extends javax.swing.JFrame {
             model.Cari(this);
             txtCari.setText(null);
         } catch (Exception ex) {
-            Logger.getLogger(FrmCariBarang.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(FormCariBarang.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_btnCariActionPerformed
 
@@ -180,23 +180,24 @@ public class FrmCariBarang extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(FrmCariBarang.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FormCariBarang.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(FrmCariBarang.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FormCariBarang.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(FrmCariBarang.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FormCariBarang.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(FrmCariBarang.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FormCariBarang.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 try {
-                    new FrmCariBarang().setVisible(true);
+                    new FormCariBarang().setVisible(true);
                 } catch (SQLException ex) {
-                    Logger.getLogger(FrmCariBarang.class.getName()).log(Level.SEVERE, null, ex);
+                    Logger.getLogger(FormCariBarang.class.getName()).log(Level.SEVERE, null, ex);
                 }
             }
         });

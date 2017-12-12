@@ -1,20 +1,20 @@
 package com.model;
 
-import com.method.controller_kembalian;
-import com.view.FrmKembalian;
-import com.view.FrmKasir;
+import com.form.FormKembalian;
+import com.form.FormKasir;
 import java.sql.SQLException;
+import com.method.interface_kembalian;
 
 
-public class model_kembalian implements controller_kembalian {
+public class model_kembalian implements interface_kembalian {
 
     @Override
-    public void Bersih(FrmKembalian kmbl) throws SQLException {        
+    public void Bersih(FormKembalian kmbl) throws SQLException {        
         kmbl.dispose();
-        FrmKasir.txttotal.setText(null);
-        FrmKasir.txttotal2.setText(null);
-        FrmKasir.txtbayar.setText(null);
-        FrmKasir.txtkembali.setText(null);
-        new FrmKasir().show();
+        FormKasir.txttotal.setText(null);
+        FormKasir.txttotal2.setText(null);
+        FormKasir.txtbayar.setText(null);
+        FormKasir.txtkembali.setText(null);
+        new FormKasir().show();
     }   
 }

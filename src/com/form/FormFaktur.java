@@ -1,4 +1,4 @@
-package com.view;
+package com.form;
 
 import com.model.model_faktur;
 import java.awt.Component;
@@ -12,13 +12,13 @@ import javax.swing.table.TableCellRenderer;
 import javax.swing.table.TableColumn;
 
 
-public class FrmFaktur extends javax.swing.JFrame {
+public class FormFaktur extends javax.swing.JFrame {
     
     public DefaultTableModel tbl;
     String header[] = {"ID Faktur", "Nomer Faktur", "Tanggal"};
     model_faktur model = new model_faktur();
     
-    public FrmFaktur() throws SQLException{
+    public FormFaktur() throws SQLException{
         initComponents();
         tbl = new DefaultTableModel(null, header);
         tblfaktur.setModel(tbl);
@@ -236,7 +236,7 @@ public class FrmFaktur extends javax.swing.JFrame {
         try {
             model.Simpan(this);
         } catch (SQLException ex) {
-            Logger.getLogger(FrmFaktur.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(FormFaktur.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_btnSimpanActionPerformed
 
@@ -244,12 +244,12 @@ public class FrmFaktur extends javax.swing.JFrame {
         try {
             model.Hapus(this);
         } catch (SQLException ex) {
-            Logger.getLogger(FrmFaktur.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(FormFaktur.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_btnHapusActionPerformed
 
     private void btnKeluarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKeluarActionPerformed
-        new FrmMenuAwal().show();
+        new FormMenuAwal().show();
         dispose();
     }//GEN-LAST:event_btnKeluarActionPerformed
 
@@ -257,7 +257,7 @@ public class FrmFaktur extends javax.swing.JFrame {
         try {
             model.KlikTabel(this);
         } catch (SQLException ex) {
-            Logger.getLogger(FrmFaktur.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(FormFaktur.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_tblfakturMouseClicked
 
@@ -268,7 +268,7 @@ public class FrmFaktur extends javax.swing.JFrame {
             model.Tanggal(this);
             model.Tampil(this);
         } catch (Exception ex) {
-            Logger.getLogger(FrmFaktur.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(FormFaktur.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_btnBatalActionPerformed
 
@@ -289,23 +289,24 @@ public class FrmFaktur extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(FrmFaktur.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FormFaktur.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(FrmFaktur.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FormFaktur.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(FrmFaktur.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FormFaktur.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(FrmFaktur.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FormFaktur.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 try {
-                    new FrmFaktur().setVisible(true);
+                    new FormFaktur().setVisible(true);
                 } catch (SQLException ex) {
-                    Logger.getLogger(FrmFaktur.class.getName()).log(Level.SEVERE, null, ex);
+                    Logger.getLogger(FormFaktur.class.getName()).log(Level.SEVERE, null, ex);
                 }
             }
         });

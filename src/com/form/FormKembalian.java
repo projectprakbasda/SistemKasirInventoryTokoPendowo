@@ -1,4 +1,4 @@
-package com.view;
+package com.form;
 
 import com.model.model_kembalian;
 import java.awt.Dimension;
@@ -7,11 +7,11 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 
-public class FrmKembalian extends javax.swing.JFrame {
+public class FormKembalian extends javax.swing.JFrame {
     
     model_kembalian model = new model_kembalian();
    
-    public FrmKembalian() {
+    public FormKembalian() {
         initComponents();
         this.getRootPane().setDefaultButton(cmdOK);
         cmdOK.requestFocus();
@@ -83,7 +83,7 @@ public class FrmKembalian extends javax.swing.JFrame {
         try {
             model.Bersih(this);
         } catch (Exception ex) {
-            Logger.getLogger(FrmKembalian.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(FormKembalian.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_cmdOKActionPerformed
 
@@ -104,21 +104,23 @@ public class FrmKembalian extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(FrmKembalian.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FormKembalian.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(FrmKembalian.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FormKembalian.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(FrmKembalian.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FormKembalian.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(FrmKembalian.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FormKembalian.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new FrmKembalian().setVisible(true);
+                new FormKembalian().setVisible(true);
             }
         });
     }

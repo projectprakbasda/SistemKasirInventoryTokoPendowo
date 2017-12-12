@@ -1,20 +1,20 @@
 package com.model;
 
-import com.method.controller_faktur;
 import com.koneksi.koneksi;
-import com.view.FrmFaktur;
+import com.form.FormFaktur;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import javax.swing.JOptionPane;
+import com.method.interface_faktur;
 
 
-public class model_faktur implements controller_faktur {
+public class model_faktur implements interface_faktur {
 
     @Override
-    public void Simpan(FrmFaktur fkt) throws SQLException {
+    public void Simpan(FormFaktur fkt) throws SQLException {
         try {
             Connection con = koneksi.getKoneksi();
             String sql = "insert faktur values(?,?,?)";
@@ -39,7 +39,7 @@ public class model_faktur implements controller_faktur {
     }
 
     @Override
-    public void Hapus(FrmFaktur fkt) throws SQLException {
+    public void Hapus(FormFaktur fkt) throws SQLException {
         try {
             Connection con = koneksi.getKoneksi();
             String sql = "delete from faktur where id_faktur = ?";
@@ -62,7 +62,7 @@ public class model_faktur implements controller_faktur {
     }
 
     @Override
-    public void Tampil(FrmFaktur fkt) throws SQLException {
+    public void Tampil(FormFaktur fkt) throws SQLException {
         fkt.tbl.getDataVector().removeAllElements();
         fkt.tbl.fireTableDataChanged();
         try {
@@ -83,7 +83,7 @@ public class model_faktur implements controller_faktur {
     }
 
     @Override
-    public void Bersih(FrmFaktur fkt) throws SQLException {
+    public void Bersih(FormFaktur fkt) throws SQLException {
         fkt.txtid_faktur.setText(null);
         fkt.txtnomer_faktur.setText(null);
         fkt.txttanggal.setText(null);
@@ -91,7 +91,7 @@ public class model_faktur implements controller_faktur {
     }
 
     @Override
-    public void KlikTabel(FrmFaktur fkt) throws SQLException {
+    public void KlikTabel(FormFaktur fkt) throws SQLException {
         try {
             int pilih = fkt.tblfaktur.getSelectedRow();
             if (pilih == -1) {
@@ -105,14 +105,14 @@ public class model_faktur implements controller_faktur {
     }
 
     @Override
-    public void Tanggal(FrmFaktur fkt) throws SQLException {
+    public void Tanggal(FormFaktur fkt) throws SQLException {
         java.util.Date sekarang = new java.util.Date();
         java.text.SimpleDateFormat kal = new java.text.SimpleDateFormat("yyyy-MM-dd");
         fkt.txttanggal.setText(kal.format(sekarang));        
     }
 
     @Override
-    public void AutoNomor(FrmFaktur fkt) throws SQLException {
+    public void AutoNomor(FormFaktur fkt) throws SQLException {
         try {
             Connection con = koneksi.getKoneksi();
             

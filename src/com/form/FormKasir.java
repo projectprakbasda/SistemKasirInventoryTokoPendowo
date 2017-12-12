@@ -1,4 +1,4 @@
-package com.view;
+package com.form;
 
 import com.koneksi.UserID;
 import com.model.model_kasir;
@@ -16,14 +16,14 @@ import javax.swing.table.TableCellRenderer;
 import javax.swing.table.TableColumn;
 
 
-public class FrmKasir extends javax.swing.JFrame {
+public class FormKasir extends javax.swing.JFrame {
     public DefaultTableModel tbl;
     String header[] = {"ID", "Kode Barang", "Nama Barang", "Harga", "Jumlah", "Total"};
     model_kasir model = new model_kasir();
     
     String ID = UserID.getUserLogin();
     
-    public FrmKasir() throws SQLException {
+    public FormKasir() throws SQLException {
         initComponents();
         tbl = new DefaultTableModel(null, header);
         tblKasir.setModel(tbl);
@@ -366,7 +366,7 @@ public class FrmKasir extends javax.swing.JFrame {
         try {
             model.Simpan(this);
         } catch (SQLException ex) {
-            Logger.getLogger(FrmKasir.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(FormKasir.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_btnOKActionPerformed
 
@@ -382,7 +382,7 @@ public class FrmKasir extends javax.swing.JFrame {
         try {
             model.ScanBarcode(this);
         } catch (Exception ex) {
-            Logger.getLogger(FrmKasir.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(FormKasir.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_txtkode_barangActionPerformed
 
@@ -391,7 +391,7 @@ public class FrmKasir extends javax.swing.JFrame {
             model.Kembalian(this);
             model.CetakStruk(this);
         } catch (Exception ex) {
-            Logger.getLogger(FrmKasir.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(FormKasir.class.getName()).log(Level.SEVERE, null, ex);
         } finally {
             dispose();
         }
@@ -405,7 +405,7 @@ public class FrmKasir extends javax.swing.JFrame {
         try {
             model.KlikTabel(this);
         } catch (Exception ex) {
-            Logger.getLogger(FrmKasir.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(FormKasir.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_tblKasirMouseClicked
 
@@ -414,7 +414,7 @@ public class FrmKasir extends javax.swing.JFrame {
             model.Simpan(this);
             
         } catch (SQLException ex) {
-            Logger.getLogger(FrmKasir.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(FormKasir.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_txthargaKeyReleased
 
@@ -422,13 +422,13 @@ public class FrmKasir extends javax.swing.JFrame {
         try {
             model.UbahJumlah(this);
         } catch (Exception ex) {
-            Logger.getLogger(FrmKasir.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(FormKasir.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_txtjumlahActionPerformed
 
     private void btnCariActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCariActionPerformed
         try {
-            new FrmCariBarang().show();
+            new FormCariBarang().show();
         } catch (Exception e) {
         }
     }//GEN-LAST:event_btnCariActionPerformed
@@ -437,12 +437,12 @@ public class FrmKasir extends javax.swing.JFrame {
         try {
             model.Hapus(this);
         } catch (Exception ex) {
-            Logger.getLogger(FrmKasir.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(FormKasir.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_btnHapusActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        new FrmMenuAwal().show();
+        new FormMenuAwal().show();
         dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -455,7 +455,7 @@ public class FrmKasir extends javax.swing.JFrame {
                 model.KlikTabel(this);
             }
         } catch (Exception ex) {
-            Logger.getLogger(FrmKasir.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(FormKasir.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_txtkode_barangKeyReleased
 
@@ -482,23 +482,24 @@ public class FrmKasir extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(FrmKasir.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FormKasir.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(FrmKasir.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FormKasir.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(FrmKasir.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FormKasir.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(FrmKasir.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FormKasir.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 try {
-                    new FrmKasir().setVisible(true);
+                    new FormKasir().setVisible(true);
                 } catch (SQLException ex) {
-                    Logger.getLogger(FrmKasir.class.getName()).log(Level.SEVERE, null, ex);
+                    Logger.getLogger(FormKasir.class.getName()).log(Level.SEVERE, null, ex);
                 }
             }
         });

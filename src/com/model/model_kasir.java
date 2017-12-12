@@ -1,9 +1,8 @@
 package com.model;
 
-import com.method.controller_kasir;
 import com.koneksi.koneksi;
-import com.view.FrmKasir;
-import com.view.FrmKembalian;
+import com.form.FormKasir;
+import com.form.FormKembalian;
 import java.io.File;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -22,8 +21,9 @@ import net.sf.jasperreports.engine.design.JasperDesign;
 import net.sf.jasperreports.engine.util.JRLoader;
 import net.sf.jasperreports.engine.xml.JRXmlLoader;
 import net.sf.jasperreports.view.JasperViewer;
+import com.method.interface_kasir;
 
-public class model_kasir implements controller_kasir {
+public class model_kasir implements interface_kasir {
 
     JasperReport jasperReport;
     JasperDesign jasperDesign;
@@ -32,7 +32,7 @@ public class model_kasir implements controller_kasir {
     Map<String, Object> parameter = new HashMap<String, Object>();
 
     @Override
-    public void Simpan(FrmKasir ksr) throws SQLException {
+    public void Simpan(FormKasir ksr) throws SQLException {
         try {
             Connection con = koneksi.getKoneksi();
             String sql = "insert transaksi values (?,?,?,?,?,?)";
@@ -71,7 +71,7 @@ public class model_kasir implements controller_kasir {
     }
 
     @Override
-    public void Tampil(FrmKasir ksr) throws SQLException {
+    public void Tampil(FormKasir ksr) throws SQLException {
         ksr.tbl.getDataVector().removeAllElements();
         ksr.tbl.fireTableDataChanged();
         try {
@@ -95,14 +95,14 @@ public class model_kasir implements controller_kasir {
     }
 
     @Override
-    public void Tanggal(FrmKasir ksr) throws SQLException {
+    public void Tanggal(FormKasir ksr) throws SQLException {
         java.util.Date sekarang = new java.util.Date();
         java.text.SimpleDateFormat kal = new java.text.SimpleDateFormat("yyyy-MM-dd");
         ksr.txtTanggal.setText(kal.format(sekarang));
     }
 
     @Override
-    public void ScanBarcode(FrmKasir ksr) throws SQLException {
+    public void ScanBarcode(FormKasir ksr) throws SQLException {
         try {
             Connection con = koneksi.getKoneksi();
             Statement st = con.createStatement();
@@ -121,7 +121,7 @@ public class model_kasir implements controller_kasir {
     }
 
     @Override
-    public void AutoNomor(FrmKasir ksr) throws SQLException {
+    public void AutoNomor(FormKasir ksr) throws SQLException {
         try {
             Connection con = koneksi.getKoneksi();
 
@@ -138,7 +138,7 @@ public class model_kasir implements controller_kasir {
     }
 
     @Override
-    public void AutoNomorKode(FrmKasir ksr) throws SQLException {
+    public void AutoNomorKode(FormKasir ksr) throws SQLException {
         try {
             Connection con = koneksi.getKoneksi();
 
@@ -155,7 +155,7 @@ public class model_kasir implements controller_kasir {
     }
 
     @Override
-    public void Bersih(FrmKasir ksr) throws SQLException {
+    public void Bersih(FormKasir ksr) throws SQLException {
         ksr.txtkode_barang.setText(null);
         ksr.txtnama.setText(null);
         ksr.txtharga.setText(null);
@@ -164,7 +164,7 @@ public class model_kasir implements controller_kasir {
     }
 
     @Override
-    public void Total(FrmKasir ksr) throws SQLException {
+    public void Total(FormKasir ksr) throws SQLException {
         int JumlahBaris = ksr.tblKasir.getRowCount();
         int Total = 0;
         int Harga_Barang;
@@ -179,18 +179,18 @@ public class model_kasir implements controller_kasir {
     }
 
     @Override
-    public void Kembalian(FrmKasir ksr) throws SQLException {
+    public void Kembalian(FormKasir ksr) throws SQLException {
         double total = Double.valueOf(ksr.txttotal.getText());
         double bayar = Double.valueOf(ksr.txtbayar.getText());
         double kembalian = (bayar - total);
         ksr.txtkembali.setText(String.valueOf(kembalian));
         ksr.txttotal2.setText("-" + String.valueOf(kembalian));
-        new FrmKembalian().show();
-        FrmKembalian.lblKembalian.setText(String.valueOf(kembalian));
+        new FormKembalian().show();
+        FormKembalian.lblKembalian.setText(String.valueOf(kembalian));
     }
 
     @Override
-    public void KlikTabel(FrmKasir ksr) throws SQLException {
+    public void KlikTabel(FormKasir ksr) throws SQLException {
         try {
             int pilih = ksr.tblKasir.getSelectedRow();
             if (pilih == -1) {
@@ -209,7 +209,7 @@ public class model_kasir implements controller_kasir {
     }
 
     @Override
-    public void UbahJumlah(FrmKasir ksr) throws SQLException {
+    public void UbahJumlah(FormKasir ksr) throws SQLException {
         double harga = Double.valueOf(ksr.txtharga.getText());
         double jumlah = Double.valueOf(ksr.txtjumlah.getText());
         double jumlah_baru = (harga * jumlah);
@@ -219,7 +219,7 @@ public class model_kasir implements controller_kasir {
     }
 
     @Override
-    public void Ubah(FrmKasir ksr) throws SQLException {
+    public void Ubah(FormKasir ksr) throws SQLException {
         try {
             Connection con = koneksi.getKoneksi();
             String sql = "update transaksi set harga_barang = '" + ksr.txtharga.getText() + "', "
@@ -238,7 +238,7 @@ public class model_kasir implements controller_kasir {
     }
 
     @Override
-    public void Hapus(FrmKasir ksr) throws SQLException {
+    public void Hapus(FormKasir ksr) throws SQLException {
         try {
             Connection con = koneksi.getKoneksi();
             String sql = "delete from transaksi where id_transaksi = ?";
@@ -260,7 +260,7 @@ public class model_kasir implements controller_kasir {
     }
 
     @Override
-    public void CetakStruk(FrmKasir ksr) throws SQLException {
+    public void CetakStruk(FormKasir ksr) throws SQLException {
         try {
             parameter.put("kode_transaksi", ksr.txtkode_transaksi.getText().toString());
             parameter.put("total", ksr.txttotal.getText());

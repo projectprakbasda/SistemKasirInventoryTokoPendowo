@@ -1,4 +1,4 @@
-package com.view;
+package com.form;
 
 import com.model.model_suplier;
 import java.awt.Component;
@@ -12,13 +12,13 @@ import javax.swing.table.TableCellRenderer;
 import javax.swing.table.TableColumn;
 
 
-public class FrmSuplier extends javax.swing.JFrame {
+public class FormSuplier extends javax.swing.JFrame {
 
     public DefaultTableModel tbl;
     String header[] = {"ID Suplier", "Nama", "Alamat", "No Telp", "Bank", "No Rekening"};
     model_suplier model = new model_suplier();
     
-    public FrmSuplier() throws SQLException{
+    public FormSuplier() throws SQLException{
         initComponents();
         tbl = new DefaultTableModel(null, header);
         tblsuplier.setModel(tbl);
@@ -295,7 +295,7 @@ public class FrmSuplier extends javax.swing.JFrame {
         try {
             model.Ubah(this);
         } catch (SQLException ex) {
-            Logger.getLogger(FrmSuplier.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(FormSuplier.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_btnUbahActionPerformed
 
@@ -303,7 +303,7 @@ public class FrmSuplier extends javax.swing.JFrame {
         try {
             model.Simpan(this);
         } catch (SQLException ex) {
-            Logger.getLogger(FrmSuplier.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(FormSuplier.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_btnSimpanActionPerformed
 
@@ -311,12 +311,12 @@ public class FrmSuplier extends javax.swing.JFrame {
         try {
             model.Hapus(this);
         } catch (SQLException ex) {
-            Logger.getLogger(FrmSuplier.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(FormSuplier.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_btnHapusActionPerformed
 
     private void btnKeluarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKeluarActionPerformed
-        new FrmMenuAwal().show();
+        new FormMenuAwal().show();
         dispose();
     }//GEN-LAST:event_btnKeluarActionPerformed
 
@@ -324,7 +324,7 @@ public class FrmSuplier extends javax.swing.JFrame {
         try {
             model.KlikTabel(this);
         } catch (SQLException ex) {
-            Logger.getLogger(FrmSuplier.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(FormSuplier.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_tblsuplierMouseClicked
 
@@ -333,7 +333,7 @@ public class FrmSuplier extends javax.swing.JFrame {
             model.Bersih(this);
             model.AutoNomor(this);
         } catch (Exception ex) {
-            Logger.getLogger(FrmSuplier.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(FormSuplier.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_btnBatalActionPerformed
 
@@ -354,23 +354,24 @@ public class FrmSuplier extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(FrmSuplier.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FormSuplier.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(FrmSuplier.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FormSuplier.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(FrmSuplier.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FormSuplier.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(FrmSuplier.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FormSuplier.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 try {
-                    new FrmSuplier().setVisible(true);
+                    new FormSuplier().setVisible(true);
                 } catch (SQLException ex) {
-                    Logger.getLogger(FrmSuplier.class.getName()).log(Level.SEVERE, null, ex);
+                    Logger.getLogger(FormSuplier.class.getName()).log(Level.SEVERE, null, ex);
                 }
             }
         });

@@ -1,17 +1,17 @@
 package com.model;
 
-import com.method.controller_barang;
 import com.koneksi.koneksi;
-import com.view.FrmBarang;
+import com.form.FormBarang;
 import java.sql.*;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import javax.swing.JOptionPane;
+import com.method.interface_barang;
 
-public class model_barang implements controller_barang {
+public class model_barang implements interface_barang {
 
     @Override
-    public void Simpan(FrmBarang brg) throws SQLException {
+    public void Simpan(FormBarang brg) throws SQLException {
         try {
             Connection con = koneksi.getKoneksi();
             String sql = "insert barang values(?,?,?,?)";
@@ -36,7 +36,7 @@ public class model_barang implements controller_barang {
     }
 
     @Override
-    public void Ubah(FrmBarang brg) throws SQLException {
+    public void Ubah(FormBarang brg) throws SQLException {
         try {
             Connection con = koneksi.getKoneksi();
             String sql = "update barang set nama = ?, "
@@ -64,7 +64,7 @@ public class model_barang implements controller_barang {
     }
 
     @Override
-    public void Hapus(FrmBarang brg) throws SQLException {
+    public void Hapus(FormBarang brg) throws SQLException {
         try {
             Connection con = koneksi.getKoneksi();
             String sql = "delete from barang where kode_barang = ?";
@@ -85,7 +85,7 @@ public class model_barang implements controller_barang {
     }
 
     @Override
-    public void Tampil(FrmBarang brg) throws SQLException {
+    public void Tampil(FormBarang brg) throws SQLException {
         brg.tbl.getDataVector().removeAllElements();
         brg.tbl.fireTableDataChanged();
         try {
@@ -108,7 +108,7 @@ public class model_barang implements controller_barang {
     }
 
     @Override
-    public void Bersih(FrmBarang brg) {
+    public void Bersih(FormBarang brg) {
         brg.txtkode_barang.setText(null);
         brg.txtnama.setText(null);
         brg.cmbkategori.setSelectedItem("Kategori");
@@ -119,7 +119,7 @@ public class model_barang implements controller_barang {
     }
 
     @Override
-    public void KlikTabel(FrmBarang brg) throws SQLException {
+    public void KlikTabel(FormBarang brg) throws SQLException {
         try {
             int pilih = brg.tblBarang.getSelectedRow();
             String s = (String) brg.tblBarang.getModel().getValueAt(pilih, 3);
@@ -153,7 +153,7 @@ public class model_barang implements controller_barang {
     }
 
     @Override
-    public void Combo(FrmBarang brg) throws SQLException {
+    public void Combo(FormBarang brg) throws SQLException {
         try {
             Connection con = koneksi.getKoneksi();
             Statement st = con.createStatement();
@@ -174,7 +174,7 @@ public class model_barang implements controller_barang {
     }
 
     @Override
-    public void Cari(FrmBarang brg) throws SQLException {
+    public void Cari(FormBarang brg) throws SQLException {
         brg.tbl.getDataVector().removeAllElements();
         brg.tbl.fireTableDataChanged();
         try {
@@ -197,7 +197,7 @@ public class model_barang implements controller_barang {
     }
 
     @Override
-    public void Combo2(FrmBarang brg) throws SQLException {
+    public void Combo2(FormBarang brg) throws SQLException {
         try {
             Connection con = koneksi.getKoneksi();
             Statement st = con.createStatement();

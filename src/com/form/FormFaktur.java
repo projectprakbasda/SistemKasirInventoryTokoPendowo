@@ -83,7 +83,8 @@ public class FormFaktur extends javax.swing.JFrame {
         btnBatal = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Toko MINI BERKAH - Faktur");
+        setTitle("Toko Pendowo - Faktur");
+        setResizable(false);
 
         btnKeluar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btnKeluar.setText("Kembali");

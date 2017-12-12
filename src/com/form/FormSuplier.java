@@ -90,7 +90,8 @@ public class FormSuplier extends javax.swing.JFrame {
         btnBatal = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Toko MINI BERKAH - Suplier");
+        setTitle("Toko Pendowo - Suplier");
+        setResizable(false);
 
         tblsuplier.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         tblsuplier.setModel(new javax.swing.table.DefaultTableModel(

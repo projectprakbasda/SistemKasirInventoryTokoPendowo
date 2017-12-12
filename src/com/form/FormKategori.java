@@ -82,7 +82,8 @@ public class FormKategori extends javax.swing.JFrame {
         btnBatal = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Toko MINI BERKAH - Kategori");
+        setTitle("Toko Pendowo - Kategori");
+        setResizable(false);
 
         tblKategori.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         tblKategori.setModel(new javax.swing.table.DefaultTableModel(

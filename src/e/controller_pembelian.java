@@ -1,18 +1,18 @@
 package com.method;
 
-import com.form.FormPembalian;
+import com.form.FormPembelian;
 import java.sql.SQLException;
 
 
 public interface controller_pembelian {
-    public void Simpan (FormPembalian pmbl) throws SQLException;
-    public void Hapus (FormPembalian pmbl) throws SQLException;
-    public void Tampil (FormPembalian pmbl) throws SQLException;
-    public void KlikTabel (FormPembalian pmbl) throws SQLException;
-    public void Bersih (FormPembalian pmbl) throws SQLException;
-    public void Combo1 (FormPembalian pmbl) throws SQLException;
-    public void Combo2 (FormPembalian pmbl) throws SQLException;
-    public void Combo3 (FormPembalian pmbl) throws SQLException;
-    public void Combo4 (FormPembalian pmbl) throws SQLException;
-    public void AutoNomor (FormPembalian pmbl) throws SQLException;
+    public void Simpan (FormPembelian pmbl) throws SQLException;
+    public void Hapus (FormPembelian pmbl) throws SQLException;
+    public void Tampil (FormPembelian pmbl) throws SQLException;
+    public void KlikTabel (FormPembelian pmbl) throws SQLException;
+    public void Bersih (FormPembelian pmbl) throws SQLException;
+    public void Combo1 (FormPembelian pmbl) throws SQLException;
+    public void Combo2 (FormPembelian pmbl) throws SQLException;
+    public void Combo3 (FormPembelian pmbl) throws SQLException;
+    public void Combo4 (FormPembelian pmbl) throws SQLException;
+    public void AutoNomor (FormPembelian pmbl) throws SQLException;
 }

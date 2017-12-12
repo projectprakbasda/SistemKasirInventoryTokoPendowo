@@ -93,7 +93,8 @@ public class FormBarang extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Toko MINI BERKAH - Data Barang");
+        setTitle("Toko Pendowo - Data Barang");
+        setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(153, 255, 255));
 

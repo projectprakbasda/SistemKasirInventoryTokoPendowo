@@ -2,7 +2,7 @@ package com.model;
 
 import com.method.controller_pembelian;
 import com.koneksi.koneksi;
-import com.form.FormPembalian;
+import com.form.FormPembelian;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -14,7 +14,7 @@ import javax.swing.JOptionPane;
 public class model_pembelian implements controller_pembelian {
 
     @Override
-    public void Simpan(FormPembalian pmbl) throws SQLException {
+    public void Simpan(FormPembelian pmbl) throws SQLException {
         try {
             Connection con = koneksi.getKoneksi();
             String sql = "insert pembelian values(?,?,?,?,?)";
@@ -40,7 +40,7 @@ public class model_pembelian implements controller_pembelian {
     }
 
     @Override
-    public void Hapus(FormPembalian pmbl) throws SQLException {
+    public void Hapus(FormPembelian pmbl) throws SQLException {
         try {
             Connection con = koneksi.getKoneksi();
             String sql = "delete from pembelian where id_pembelian = ?";
@@ -62,7 +62,7 @@ public class model_pembelian implements controller_pembelian {
     }
 
     @Override
-    public void Tampil(FormPembalian pmbl) throws SQLException {
+    public void Tampil(FormPembelian pmbl) throws SQLException {
         pmbl.tbl.getDataVector().removeAllElements();
         pmbl.tbl.fireTableDataChanged();
         try {
@@ -85,7 +85,7 @@ public class model_pembelian implements controller_pembelian {
     }
 
     @Override
-    public void KlikTabel(FormPembalian pmbl) throws SQLException {
+    public void KlikTabel(FormPembelian pmbl) throws SQLException {
         try {
             int pilih = pmbl.tblPembelian.getSelectedRow();
             if (pilih == -1) {
@@ -131,7 +131,7 @@ public class model_pembelian implements controller_pembelian {
     }
 
     @Override
-    public void Bersih(FormPembalian pmbl) throws SQLException {
+    public void Bersih(FormPembelian pmbl) throws SQLException {
         pmbl.txtid_pembelian.setText(null);
         pmbl.cmbFaktur.setSelectedItem("Faktur");
         pmbl.cmbSuplier.setSelectedItem("Suplier");
@@ -140,7 +140,7 @@ public class model_pembelian implements controller_pembelian {
     }
 
     @Override
-    public void Combo1(FormPembalian pmbl) throws SQLException {
+    public void Combo1(FormPembelian pmbl) throws SQLException {
         try {
             Connection con = koneksi.getKoneksi();
             Statement st = con.createStatement();
@@ -160,7 +160,7 @@ public class model_pembelian implements controller_pembelian {
     }
 
     @Override
-    public void Combo2(FormPembalian pmbl) throws SQLException {
+    public void Combo2(FormPembelian pmbl) throws SQLException {
         try {
             Connection con = koneksi.getKoneksi();
             Statement st = con.createStatement();
@@ -180,7 +180,7 @@ public class model_pembelian implements controller_pembelian {
     }
 
     @Override
-    public void AutoNomor(FormPembalian pmbl) throws SQLException {
+    public void AutoNomor(FormPembelian pmbl) throws SQLException {
         try {
             Connection con = koneksi.getKoneksi();
             
@@ -197,7 +197,7 @@ public class model_pembelian implements controller_pembelian {
     }
 
     @Override
-    public void Combo3(FormPembalian pmbl) throws SQLException {
+    public void Combo3(FormPembelian pmbl) throws SQLException {
         try {
             Connection con = koneksi.getKoneksi();
             Statement st = con.createStatement();
@@ -216,7 +216,7 @@ public class model_pembelian implements controller_pembelian {
     }
 
     @Override
-    public void Combo4(FormPembalian pmbl) throws SQLException {
+    public void Combo4(FormPembelian pmbl) throws SQLException {
         try {
             Connection con = koneksi.getKoneksi();
             Statement st = con.createStatement();

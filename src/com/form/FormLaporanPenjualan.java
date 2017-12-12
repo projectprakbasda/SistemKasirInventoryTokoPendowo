@@ -36,7 +36,8 @@ public class FormLaporanPenjualan extends javax.swing.JFrame {
         btnKeluar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Toko MINI Berkah - Laporan Penjualan");
+        setTitle("Toko Pendowo - Laporan Penjualan");
+        setResizable(false);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel1.setText("Tanggal Dari");

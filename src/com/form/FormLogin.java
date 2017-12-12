@@ -32,7 +32,8 @@ public class FormLogin extends javax.swing.JFrame {
         btnLogin = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Toko MINI BERKAH - Login");
+        setTitle("Toko Pendowo - Login");
+        setAlwaysOnTop(true);
         setResizable(false);
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N

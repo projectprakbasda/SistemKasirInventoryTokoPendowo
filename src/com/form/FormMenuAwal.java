@@ -57,7 +57,7 @@ public class FormMenuAwal extends javax.swing.JFrame {
         jMenuItem2 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Toko MINI BERKAH - Menu");
+        setTitle("Toko Pendowo - Menu");
         setResizable(false);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
@@ -244,7 +244,7 @@ public class FormMenuAwal extends javax.swing.JFrame {
 
     private void btnPembelianActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPembelianActionPerformed
         try {
-            new FormPembalian().show();
+            new FormPembelian().show();
             dispose();
         } catch (SQLException ex) {
             Logger.getLogger(FormMenuAwal.class.getName()).log(Level.SEVERE, null, ex);

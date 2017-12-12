@@ -106,7 +106,8 @@ public class FormKasir extends javax.swing.JFrame {
         jTextField4.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Toko MINI BERKAH - Kasir");
+        setTitle("Toko Pendowo - Kasir");
+        setResizable(false);
 
         txtid_transaksi.setEditable(false);
         txtid_transaksi.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N

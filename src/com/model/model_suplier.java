@@ -1,6 +1,5 @@
 package com.model;
 
-import com.method.controller_suplier;
 import com.koneksi.koneksi;
 import com.form.FormSuplier;
 import java.sql.Connection;
@@ -9,9 +8,10 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import javax.swing.JOptionPane;
+import com.method.interface_suplier;
 
 
-public class model_suplier implements controller_suplier{
+public class model_suplier implements interface_suplier{
 
     @Override
     public void Simpan(FormSuplier spl) throws SQLException {

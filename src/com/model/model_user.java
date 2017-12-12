@@ -1,6 +1,5 @@
 package com.model;
 
-import com.method.controller_user;
 import com.koneksi.koneksi;
 import com.form.FormUser;
 import java.sql.Connection;
@@ -9,9 +8,10 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import javax.swing.JOptionPane;
+import com.method.interface_user;
 
 
-public class model_user implements controller_user{
+public class model_user implements interface_user{
 
     @Override
     public void Simpan(FormUser usr) throws SQLException {

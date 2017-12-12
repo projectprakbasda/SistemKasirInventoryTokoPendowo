@@ -1,6 +1,5 @@
 package com.model;
 
-import com.method.controller_login;
 import com.koneksi.UserID;
 import com.koneksi.koneksi;
 import com.form.FormLogin;
@@ -11,8 +10,9 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import javax.swing.JOptionPane;
+import com.method.interface_login;
 
-public class model_login implements controller_login {
+public class model_login implements interface_login {
 
     @Override
     public void Login(FormLogin lgn) throws SQLException {

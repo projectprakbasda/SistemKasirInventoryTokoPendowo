@@ -1,6 +1,5 @@
 package com.model;
 
-import com.method.controller_pembelian;
 import com.koneksi.koneksi;
 import com.form.FormPembelian;
 import java.sql.Connection;
@@ -9,9 +8,10 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import javax.swing.JOptionPane;
+import com.method.interface_pembelian;
 
 
-public class model_pembelian implements controller_pembelian {
+public class model_pembelian implements interface_pembelian {
 
     @Override
     public void Simpan(FormPembelian pmbl) throws SQLException {

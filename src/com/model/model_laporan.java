@@ -1,6 +1,5 @@
 
 package com.model;
-import com.method.controller_laporan;
 import com.koneksi.koneksi;
 import com.form.FormLaporanPenjualan;
 import java.io.File;
@@ -17,10 +16,11 @@ import net.sf.jasperreports.engine.JasperReport;
 import net.sf.jasperreports.engine.design.JasperDesign;
 import net.sf.jasperreports.engine.xml.JRXmlLoader;
 import net.sf.jasperreports.view.JasperViewer;
+import com.method.interface_laporan;
 
     
 
-public class model_laporan implements controller_laporan{
+public class model_laporan implements interface_laporan{
     
     JasperReport jasperReport;
     JasperDesign jasperDesign;

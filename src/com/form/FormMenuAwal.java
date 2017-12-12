@@ -306,6 +306,9 @@ public class FormMenuAwal extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+        this.dispose();
+        FormLaporanPenjualan form=new FormLaporanPenjualan();
+        form.setVisible(true);
         // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem2ActionPerformed
 

@@ -12,7 +12,7 @@ public interface interface_kasir {
     public void KlikTabel (FormKasir ksr) throws SQLException;
     public void Bersih (FormKasir ksr) throws SQLException;
     public void Tanggal (FormKasir ksr) throws SQLException;
-    public void ScanBarcode (FormKasir ksr) throws SQLException;
+    public void AddBarang (FormKasir ksr) throws SQLException;
     public void AutoNomor (FormKasir ksr) throws SQLException;
     public void AutoNomorKode (FormKasir ksr) throws SQLException;
     public void Total (FormKasir ksr) throws SQLException;

@@ -381,7 +381,7 @@ public class FormKasir extends javax.swing.JFrame {
 
     private void txtkode_barangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtkode_barangActionPerformed
         try {
-            model.ScanBarcode(this);
+            model.AddBarang(this);
         } catch (Exception ex) {
             Logger.getLogger(FormKasir.class.getName()).log(Level.SEVERE, null, ex);
         }

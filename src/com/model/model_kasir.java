@@ -102,7 +102,7 @@ public class model_kasir implements interface_kasir {
     }
 
     @Override
-    public void ScanBarcode(FormKasir ksr) throws SQLException {
+    public void AddBarang(FormKasir ksr) throws SQLException {
         try {
             Connection con = koneksi.getKoneksi();
             Statement st = con.createStatement();

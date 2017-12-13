@@ -13,7 +13,7 @@ import javax.swing.JOptionPane;
 import com.method.interface_login;
 
 public class model_login implements interface_login {
-
+public String level;
     @Override
     public void Login(FormLogin lgn) throws SQLException {
         try {
@@ -29,9 +29,11 @@ public class model_login implements interface_login {
             if (rs.next()) {
                 UserID.setUserLogin(lgn.txtusername.getText());
                 if (rs.getString(4).equalsIgnoreCase("admin")) {
+                    level="Admin";
                     new FormMenuAwal().show();
                     lgn.dispose();
                 } else if (rs.getString(4).equalsIgnoreCase("kasir")) {
+                    level="Kasir";
                     new FormKasir().show();
                     lgn.dispose();
                 } else {

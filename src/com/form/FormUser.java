@@ -27,6 +27,8 @@ public class FormUser extends javax.swing.JFrame {
         model.AutoNomor(this);
         setLebarKolom();
         txtusername.requestFocus();
+        
+         this.setLocationRelativeTo(null);
     }
     
     public void setColomnWidth(int kolom){

@@ -27,6 +27,7 @@ public class FormCariBarang extends javax.swing.JFrame {
         setLebarKolom();
         this.getRootPane().setDefaultButton(btnCari);
         txtCari.requestFocus();
+         this.setLocationRelativeTo(null);
     }
     
     public void setColomnWidth(int kolom){

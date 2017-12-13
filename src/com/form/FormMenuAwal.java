@@ -24,6 +24,7 @@ public class FormMenuAwal extends javax.swing.JFrame {
         (screenSize.height - frameSize.height) / 2);
         txtUser.setText(ID);
         tanggal();
+         this.setLocationRelativeTo(null);
     }
     
     private void tanggal(){

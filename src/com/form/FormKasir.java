@@ -37,6 +37,7 @@ public class FormKasir extends javax.swing.JFrame {
         txttotal.setText("0");
         this.getRootPane().setDefaultButton(btnOK);
         txtnama_kasir.setText(ID);
+         this.setLocationRelativeTo(null);
     }
     
     public void setColomnWidth(int kolom){
@@ -114,7 +115,6 @@ public class FormKasir extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Toko Pendowo - Kasir");
-        setPreferredSize(new java.awt.Dimension(935, 564));
         setSize(new java.awt.Dimension(951, 680));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 

@@ -27,6 +27,7 @@ public class FormKategori extends javax.swing.JFrame {
         model.AutoNomor(this);
         txtnama_kategori.requestFocus();
         setLebarKolom();
+         this.setLocationRelativeTo(null);
     }
     
     public void setColomnWidth(int kolom){

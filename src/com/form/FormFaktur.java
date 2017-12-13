@@ -28,6 +28,7 @@ public class FormFaktur extends javax.swing.JFrame {
         model.Tanggal(this);
         txtnomer_faktur.requestFocus();
         setLebarKolom();
+         this.setLocationRelativeTo(null);
     }
     
     public void setColomnWidth(int kolom){

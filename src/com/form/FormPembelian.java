@@ -29,6 +29,7 @@ public class FormPembelian extends javax.swing.JFrame {
         model.Combo2(this);
         txtid_faktur.setVisible(false);
         txtid_suplier.setVisible(false);
+         this.setLocationRelativeTo(null);
     }
     
     public void setColomnWidth(int kolom){
@@ -69,6 +70,7 @@ public class FormPembelian extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel2 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tblPembelian = new javax.swing.JTable();
         jPanel1 = new javax.swing.JPanel();
@@ -93,6 +95,11 @@ public class FormPembelian extends javax.swing.JFrame {
         setTitle("Toko Pendowo - Pembelian");
         setResizable(false);
 
+        jPanel2.setBackground(new java.awt.Color(44, 62, 80));
+
+        tblPembelian.setBackground(new java.awt.Color(248, 148, 6));
+        tblPembelian.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        tblPembelian.setForeground(new java.awt.Color(255, 255, 255));
         tblPembelian.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -111,27 +118,45 @@ public class FormPembelian extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(tblPembelian);
 
+        jPanel1.setBackground(new java.awt.Color(44, 62, 80));
         jPanel1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("ID Pembelian");
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("No Faktur");
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Suplier");
 
-        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Tanggal");
 
-        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Jumlah");
 
         txtid_pembelian.setEditable(false);
-        txtid_pembelian.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        txtid_pembelian.setBackground(new java.awt.Color(248, 148, 6));
+        txtid_pembelian.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        txtid_pembelian.setForeground(new java.awt.Color(255, 255, 255));
 
-        cmbFaktur.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        txtTanggal.setBackground(new java.awt.Color(248, 148, 6));
+        txtTanggal.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        txtTanggal.setForeground(new java.awt.Color(255, 255, 255));
+
+        txtJumlah.setBackground(new java.awt.Color(248, 148, 6));
+        txtJumlah.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        txtJumlah.setForeground(new java.awt.Color(255, 255, 255));
+
+        cmbFaktur.setBackground(new java.awt.Color(248, 148, 6));
+        cmbFaktur.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        cmbFaktur.setForeground(new java.awt.Color(255, 255, 255));
         cmbFaktur.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Faktur" }));
         cmbFaktur.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -139,7 +164,9 @@ public class FormPembelian extends javax.swing.JFrame {
             }
         });
 
-        cmbSuplier.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        cmbSuplier.setBackground(new java.awt.Color(248, 148, 6));
+        cmbSuplier.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        cmbSuplier.setForeground(new java.awt.Color(255, 255, 255));
         cmbSuplier.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Suplier" }));
         cmbSuplier.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -147,7 +174,9 @@ public class FormPembelian extends javax.swing.JFrame {
             }
         });
 
-        btnSimpan.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnSimpan.setBackground(new java.awt.Color(31, 58, 147));
+        btnSimpan.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        btnSimpan.setForeground(new java.awt.Color(255, 255, 255));
         btnSimpan.setText("Simpan");
         btnSimpan.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -155,7 +184,9 @@ public class FormPembelian extends javax.swing.JFrame {
             }
         });
 
-        btnHapus.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnHapus.setBackground(new java.awt.Color(242, 38, 19));
+        btnHapus.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        btnHapus.setForeground(new java.awt.Color(255, 255, 255));
         btnHapus.setText("Hapus");
         btnHapus.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -164,11 +195,17 @@ public class FormPembelian extends javax.swing.JFrame {
         });
 
         txtid_faktur.setEditable(false);
+        txtid_faktur.setBackground(new java.awt.Color(44, 62, 80));
+        txtid_faktur.setBorder(null);
 
         txtid_suplier.setEditable(false);
+        txtid_suplier.setBackground(new java.awt.Color(44, 62, 80));
+        txtid_suplier.setBorder(null);
 
-        btnBatal.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        btnBatal.setText("Batal");
+        btnBatal.setBackground(new java.awt.Color(31, 58, 147));
+        btnBatal.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        btnBatal.setForeground(new java.awt.Color(255, 255, 255));
+        btnBatal.setText("Reset");
         btnBatal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBatalActionPerformed(evt);
@@ -256,7 +293,9 @@ public class FormPembelian extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        btnKeluar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnKeluar.setBackground(new java.awt.Color(31, 58, 147));
+        btnKeluar.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        btnKeluar.setForeground(new java.awt.Color(255, 255, 255));
         btnKeluar.setText("Kembali");
         btnKeluar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -264,30 +303,51 @@ public class FormPembelian extends javax.swing.JFrame {
             }
         });
 
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 874, Short.MAX_VALUE)
+            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel2Layout.createSequentialGroup()
+                    .addContainerGap()
+                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel2Layout.createSequentialGroup()
+                            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 399, Short.MAX_VALUE)
+                            .addComponent(btnKeluar))
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING))
+                    .addContainerGap()))
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 533, Short.MAX_VALUE)
+            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel2Layout.createSequentialGroup()
+                    .addContainerGap()
+                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnKeluar))
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 249, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap()))
+        );
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnKeluar))
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 768, Short.MAX_VALUE))
-                .addContainerGap())
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(btnKeluar)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 249, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
@@ -402,6 +462,7 @@ public class FormPembelian extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
     public javax.swing.JTable tblPembelian;
     public javax.swing.JTextField txtJumlah;
